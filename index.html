@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090914">
+<title>حكاية صغيرة من قلبي ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--pink:#ff6b9e;--rose:#ffb0c8;--gold:#f5d99b;--ink:#090914;--glass:rgba(255,255,255,.07)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 20% 0%,#2a1230 0%,transparent 38%),radial-gradient(ellipse at 100% 45%,#151b3c 0%,transparent 35%),var(--ink);color:#fff;font-family:'Cairo',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:47px 47px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1080px,92%);margin:auto}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:48px 0;position:relative}
+.hero-card{width:min(760px,100%);padding:clamp(26px,6vw,60px) 22px;border:1px solid #ffffff20;border-radius:32px;background:linear-gradient(145deg,#ffffff10,#ffffff04);backdrop-filter:blur(12px);box-shadow:0 25px 100px #0007;position:relative;overflow:hidden}
+.eyebrow{color:var(--gold);letter-spacing:2px;font-size:.85rem}
+h1{font-size:clamp(2.3rem,8vw,5.2rem);line-height:1.25;margin:18px 0;background:linear-gradient(90deg,#fff,var(--rose),var(--gold));-webkit-background-clip:text;color:transparent}
+.lead{color:#e4dce9;line-height:2;max-width:580px;margin:0 auto 28px}
+.btn{border:0;border-radius:999px;padding:13px 28px;color:#21101a;background:linear-gradient(110deg,var(--rose),var(--gold));font-weight:800;box-shadow:0 10px 35px #ff6b9e35;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.tiny{font-size:.82rem;color:#b8b1c8;margin-top:17px}
+.heart{display:inline-block;color:var(--pink);font-size:2rem;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+section{padding:78px 0}
+.section-title{text-align:center;font-size:clamp(1.8rem,5vw,3rem);margin:0 0 12px}
+.section-sub{text-align:center;color:#bcb4c9;line-height:1.9;margin:0 auto 35px;max-width:650px}
+.timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.memory{border:1px solid #ffffff1b;background:var(--glass);border-radius:24px;padding:25px;position:relative;overflow:hidden}
+.memory:before{content:"";position:absolute;top:0;right:0;width:4px;height:100%;background:linear-gradient(var(--pink),var(--gold))}
+.date{color:var(--gold);font-weight:800;font-size:1.05rem}
+.memory h3{margin:8px 0;font-size:1.3rem}
+.memory p{color:#d0c9d9;line-height:1.9;margin:0}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.photo{border-radius:22px;overflow:hidden;border:1px solid #ffffff20;background:#171522;position:relative;box-shadow:0 18px 45px #0005}
+.photo img{width:100%;height:clamp(220px,45vw,430px);display:block;object-fit:cover;transition:transform .5s}
+.photo:hover img{transform:scale(1.035)}
+.photo span{position:absolute;bottom:0;right:0;left:0;padding:22px 14px 12px;background:linear-gradient(transparent,#000c);font-size:.9rem;color:#fff}
+.letter{max-width:800px;margin:auto;padding:clamp(24px,5vw,48px);border:1px solid #ffb0c833;background:linear-gradient(145deg,#ff6b9e12,#ffffff05);border-radius:28px;line-height:2.15;color:#eee5f0;font-size:1.03rem}
+.letter strong{color:var(--rose)}
+.closing{text-align:center;padding-bottom:95px}
+.closing p{max-width:650px;margin:12px auto 24px;color:#d1c8d9;line-height:2}
+footer{text-align:center;padding:22px;color:#8c849d;border-top:1px solid #ffffff12;font-size:.8rem}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+#musicNote{font-size:.8rem;color:#bcb4c9;margin-top:12px}
+
+/* إضافات تفاعلية */
+.sparkle-btn{margin-top:18px;background:transparent;border:1px solid #ffb0c866;color:#ffe2ed;border-radius:999px;padding:11px 20px}
+.sparkle-btn:hover{background:#ffb0c815}
+.extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+.extra-card{border:1px solid #ffffff20;background:#ffffff08;border-radius:20px;padding:20px;text-align:center;cursor:pointer;transition:.25s;min-height:150px}
+.extra-card:hover{transform:translateY(-5px);border-color:#ffb0c866;background:#ffb0c80d}
+.extra-card .emoji{font-size:2rem;display:block;margin-bottom:8px}
+.extra-card h3{margin:5px 0 8px}
+.extra-card p{margin:0;color:#cfc6d8;line-height:1.8;font-size:.92rem}
+.extra-message{display:none;margin:18px auto 0;max-width:650px;padding:22px;border:1px solid #f5d99b55;border-radius:20px;background:#f5d99b0b;line-height:2;color:#f4e8d0;text-align:center}
+.extra-message.open{display:block;animation:appear .5s ease}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.lightbox{position:fixed;inset:0;background:#05050ceF;z-index:1000;display:none;align-items:center;justify-content:center;padding:18px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(94vw,900px);max-height:82svh;border-radius:18px;box-shadow:0 20px 90px #000}
+.lightbox button{position:absolute;top:18px;left:18px;border:1px solid #ffffff55;background:#ffffff15;color:white;border-radius:50%;width:44px;height:44px;font-size:1.3rem}
+.float-heart{position:fixed;bottom:-35px;z-index:999;pointer-events:none;animation:floatUp 3.8s ease-in forwards;filter:drop-shadow(0 0 7px #ff6b9e88)}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(max-width:640px){.extra-grid{grid-template-columns:1fr}.extra-card{min-height:auto}}
+
+@media(max-width:640px){.timeline,.gallery{grid-template-columns:1fr}.photo img{height:auto;max-height:500px;object-fit:cover}.hero-card{border-radius:24px}.memory{padding:22px}section{padding:58px 0}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="heart">♥</div>
+      <div class="eyebrow">حكاية صغيرة… بس غالية</div>
+      <h1>في حاجات<br>لسه ليها معنى</h1>
+      <p class="lead">مش لازم كل الحكايات تبقى مثالية عشان تكون حقيقية. دي مساحة صغيرة جمعت فيها شوية من ذكرياتنا وكلام كان نفسي أقوله بهدوء.</p>
+      <button class="btn" onclick="openStory()">افتحي المفاجأة ✨</button>
+      <div class="tiny">اعمليها على مهلك، مفيش أي استعجال 🤍</div>
+    </div>
+  </div>
+</header>
+
+<main id="story" hidden>
+<section class="wrap reveal">
+  <h2 class="section-title">محطات من حكايتنا</h2>
+  <p class="section-sub">في تواريخ بتفضل فاكرها، مش عشان هي أرقام… عشان اللي حصل فيها.</p>
+  <div class="timeline">
+    <article class="memory">
+      <div class="date">٧ / ١١</div>
+      <h3>أول يوم اتعرفنا فيه</h3>
+      <p>من يومها بدأت حكاية مكنتش أعرف إنها هتبقى مهمة عندي بالشكل ده.</p>
+    </article>
+    <article class="memory">
+      <div class="date">٢٦ / ٢</div>
+      <h3>يوم ارتباطنا</h3>
+      <p>يوم ليه مكانه في ذاكرتي، وتفاصيله هتفضل جزء من حكايتي.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <h2 class="section-title">شوية لحظات مننا 📸</h2>
+  <p class="section-sub">صور بتفكرني إن كل صورة وراها وقت ومكان وحكاية.</p>
+  <div class="gallery">
+    <figure class="photo" onclick="openPhoto(this)"><img src="images/photo1.jpg" alt="ذكرى من صورنا" loading="lazy"><span>ذكرى من حكايتنا ♥</span></figure>
+    <figure class="photo" onclick="openPhoto(this)"><img src="images/photo2.jpg" alt="صورة لينا" loading="lazy"><span>لحظة تستاهل تفضل</span></figure>
+    <figure class="photo" onclick="openPhoto(this)"><img src="images/photo3.jpg" alt="صورة لينا" loading="lazy"><span>تفاصيل صغيرة مش بنساها</span></figure>
+    <figure class="photo" onclick="openPhoto(this)"><img src="images/photo4.jpg" alt="ذكرى لينا" loading="lazy"><span>جزء من حكايتنا</span></figure>
+  </div>
+</section>
+
+
+<section class="wrap reveal">
+  <h2 class="section-title">افتحي حاجة صغيرة ✨</h2>
+  <p class="section-sub">اختاري كارت، وكل واحد جواه كلمة مختلفة.</p>
+  <div class="extra-grid">
+    <button class="extra-card" onclick="showExtra('learned')"><span class="emoji">🌱</span><h3>حاجة اتعلمتها</h3><p>اضغطي عشان تفتحي الرسالة</p></button>
+    <button class="extra-card" onclick="showExtra('wish')"><span class="emoji">🕊️</span><h3>أمنية ليكي</h3><p>كلمتين من غير أي طلب</p></button>
+    <button class="extra-card" onclick="showExtra('memory')"><span class="emoji">🌟</span><h3>عن الذكريات</h3><p>حاجة حبيت أقولها</p></button>
+  </div>
+  <div class="extra-message" id="extraMessage" aria-live="polite"></div>
+  <div style="text-align:center"><button class="sparkle-btn" onclick="makeHearts()">اضغطي هنا للقلوب ♥</button></div>
+</section>
+
+<section class="wrap reveal">
+  <h2 class="section-title">كلام من قلبي</h2>
+  <p class="section-sub">من غير تبرير، ومن غير ما أطلب منك قرار.</p>
+  <div class="letter">
+    أنا عارف إني في أوقات زعلتك، وساعات بدل ما أسمعك وأفهم إحساسك، كنت بتصرف بطريقة غلط، وده شيء أنا ندمان عليه.<br><br>
+    <strong>أنا آسف على كل مرة حسّستك فيها إن زعلك مش مهم، أو سيبتك تنامي وإنتِ مضايقة.</strong>
+    مش هبرر اللي حصل، ومش هقول كلام كبير وخلاص. اللي أقدر أعمله هو إني أتعلم من غلطتي وأغيّر طريقتي فعلًا.<br><br>
+    عملت الصفحة دي عشان أقول الكلام ده بهدوء وأحفظ الذكريات الحلوة، مش عشان أضغط عليكي أو أخليكي تحسي إنك مطالبة تردي أو ترجعي. قرارك ومشاعرك من حقك، وهحترمهم.<br><br>
+    أتمنالك الخير وراحة البال، وأيًا كان اللي جاي، شكرًا على اللحظات الحلوة اللي كانت بينا.
+  </div>
+</section>
+
+<section class="closing wrap reveal">
+  <div class="heart">♡</div>
+  <h2 class="section-title">خدي وقتك 🤍</h2>
+  <p>المفاجأة خلصت، ومش مطلوب منك أي رد. أتمنى إنك تكوني بخير، وإن الكلام وصلك زي ما كنت أقصده: بصدق واحترام.</p>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closePhoto()"><button aria-label="إغلاق" onclick="event.stopPropagation();closePhoto()">×</button><img id="lightboxImage" src="" alt="صورة من الذكريات" onclick="event.stopPropagation()"></div>
+<footer>اتعملت بهدوء ومن القلب 🤍</footer>
+<script>
+
+function showExtra(kind){
+  const messages={
+    learned:'اتعلمت إن وقت الزعل، الكلمة الهادية والسماع أهم من إني أحاول أكسب الخناقة. الكلام ده مسؤولية عليّا أطبقه، مش مجرد وعد.',
+    wish:'أمنيتي ليكي إنك تكوني مرتاحة ومبسوطة، وإن أيامك تبقى أخف وأجمل. من غير ما تكوني مطالبة بأي رد أو قرار.',
+    memory:'الذكريات الحلوة مش بتتمسح لمجرد إن حصلت بينا لحظات صعبة. أنا مقدّرها، ومقدّر الدروس اللي اتعلمتها من الحكاية دي.'
+  };
+  const box=document.getElementById('extraMessage');
+  box.textContent=messages[kind];
+  box.classList.remove('open');
+  void box.offsetWidth;
+  box.classList.add('open');
+}
+function makeHearts(){
+  const symbols=['♥','♡','✦','💗'];
+  for(let i=0;i<16;i++){
+    const el=document.createElement('span');
+    el.className='float-heart';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=(Math.random()*94+3)+'vw';
+    el.style.fontSize=(16+Math.random()*23)+'px';
+    el.style.color=['#ff6b9e','#ffb0c8','#f5d99b'][Math.floor(Math.random()*3)];
+    el.style.animationDelay=(Math.random()*.8)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),4800);
+  }
+}
+function openPhoto(figure){
+  const img=figure.querySelector('img');
+  document.getElementById('lightboxImage').src=img.src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closePhoto(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightboxImage').src='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto()});
+
+function openStory(){
+  const story=document.getElementById('story');
+  story.hidden=false;
+  document.querySelector('.hero').style.minHeight='auto';
+  document.querySelector('.hero').style.padding='35px 0 20px';
+  document.querySelector('.hero-card').style.padding='26px 20px';
+  document.querySelector('.hero h1').style.fontSize='clamp(2rem,6vw,3.2rem)';
+  story.scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show')),150);
+}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
